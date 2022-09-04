@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+input::placeholder{
+    color:#E0E0E0;
+}
+#sign_in{
+    display: none; 
+}
+#sign_in_checker{
+    display: none;
+    width: 70px;
+    height: 150px;
+    background-color: #73114B;
+    color: #ffffff;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 99;
+    border-radius: 20px 0 0 20px;
+    writing-mode: vertical-rl;
+    font-size: 35px;
+    text-align: center;
+    padding: 0 7px 0 0;
+    transition: 1s color;
+}
+.body{
+    width: 100%;
+    height: 1050px;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.skeleton_box{
+    width: 55%;
+    position: relative;
+}
+.skeleton_box img {
+    width: 100%;
+    height: 1050px;
+    object-fit: cover;
+}
+.skeleton_box h1{
+    color: #73114B;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 110px;
+}
+.skeleton_box h3{
+    color: #73114B;
+    font-size: 25px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 75px;
+}
+.decor{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: linear-gradient(293.52deg, #860752 12%, #FFD9A8 88.01%);
+    opacity: 0.4;
+    border-radius: 50%;
+    bottom: -75px;
+    right: -75px;
+}
+.login_container{
+    width: 45%;
+    height: 1050px;
+    padding: 170px 7% 0 7%;
+}
+.registration_container{
+    width: 420px;
+    height: 500px;
+}
+.registration_container > h3{
+    font-size: 36px;
+    font-family: Nunito-Sans;
+    color: #525252;
+    margin: 35px 0 0 0;
+}
+.registration_container > h5{
+    font-size: 16px;
+    font-family: Nunito-Sans;
+    color: #525252;
+}
+.google_authorization button{
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border:1px solid #E8E8E8;
+    border-radius: 5px;
+    margin: 50px 0 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.google_authorization img{
+    width: 20px;
+    height: 20px;
+    margin: 0 15px 0 0;
+}
+.registration_container > p{
+    font-size: 12px;
+    font-weight: 600;
+    color: #DDDDDD;
+    text-align: center;
+    margin-top: 40px;
+}
+form label{
+    display: block;
+}
+.mail_field label{
+    font-size: 14px;
+    color: #828282;
+    margin: 35px 0 5px 0;
+}
+.mail_field input{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #DED2D9;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 14px;
+    
+}
+.password_field{
+    font-size: 14px;
+    color: #828282;
+    margin: 25px 0 5px 0;
+}
+.password_field label{
+    font-size: 14px;
+    color: #828282;
+    margin: 35px 0 5px 0;
+}
+.password_field input{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #DED2D9;
+    border-radius: 5px;
+    padding: 18px 10px 13px;
+    font-size: 14px;
+}
+.forgot_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+}
+.forgot_container a{
+    font-size: 12px;
+    color: #7F265B;
+}
+.remember_box label{
+    display: inline-block;
+    font-size: 12px;
+    color: #A1A1A1;
+    vertical-align: 3px;
+}
+.remember_box input{
+    accent-color: #7F265B;
+    border-radius: 2px;
+}
+.form_submit{
+    width: 100%;
+    height: 50px;
+    background-color: #7F265B;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    margin: 30px 0 ;
+    font-size: 18px;
+    cursor: pointer;
+}
+.registration_container > .create_account{
+    font-size: 18px;
+    font-weight: 400;
+    color: #828282;
+    margin: 130px 0 70px 0;
+}
+.create_account a{
+    color: #7F265B;
+}
+@media only screen and (max-width: 1200px){
+    #sign_in_checker{
+        display: block; 
+    }
+    #sign_in:checked ~ .login_container{
+        width: 100%;
+        height: 1050px;
+        position: absolute;
+        top: 0;
+        padding: 0;
+    }
+    #sign_in:checked ~ #sign_in_checker{
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+        font-size: 60px;
+        background-color: #ffffff;
+        color: #7F265B;
+    }
+    .body{
+        display: block;
+    }
+    .skeleton_box{
+        width: 100%;
+    }
+    .decor{
+        bottom: 0;
+        right: 0;
+    }
+    .registration_container{
+        width: 100%;
+        height: 1050px;
+        background-color: #fffffff5;
+        padding: 50px 100px 50px 100px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .skeleton_box img{
+        object-fit: cover;
+        object-position: center bottom;
+    }
+    .skeleton_box h1{
+        font-size: 30px;
+        bottom: 100px;
+    }
+    .skeleton_box h3{
+        font-size: 20px;
+        bottom: 50px;
+    }
+    .registration_container{
+        padding: 50px 20px 50px 20px;
+    }
+    .registration_container > h3{
+        font-size: 30px;
+    }
+}
